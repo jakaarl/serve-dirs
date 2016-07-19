@@ -1,0 +1,25 @@
+{
+  "name": "serve-dirs",
+  "version": "0.1.0",
+  "description": "A simple static server.",
+  "main": "build/app/server.js",
+  "scripts": {
+    "compile": "tsc -p app && tsc -p test",
+    "clean": "rimraf build",
+    "pretest": "npm run compile",
+    "test": "mocha --recursive build/test/"
+  },
+  "keywords": [
+    "http",
+    "static",
+    "server"
+  ],
+  "author": "Jani Kaarela <jani.kaarela@gmail.com>",
+  "license": "CDDL-1.0",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^2.4.5",
+    "rimraf": "^2.5.3",
+    "typescript": "^1.8.9"
+  }
+}
